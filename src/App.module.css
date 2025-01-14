@@ -6,7 +6,7 @@
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: start;
-	align-items: start;
+	align-items: stretch;
 	background-color: var(--primary-50-900);
 	color: var(--secondary-800-100);
 }
@@ -21,7 +21,6 @@
 
 .content {
 	display: block;
-	width: 100%;
 	container: content / size;
 	flex: 1 0 auto;
 	padding: max(var(--responsive-size), var(--small-size));
