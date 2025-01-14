@@ -7,6 +7,7 @@
 	align-items: stretch;
 	list-style: none;
 	font-family: var(--display-font);
+	font-size: var(--medium-font);
 	background-color: var(--primary-50-900);
 	transition: background-color var(--x-slow-time) var(--ease-out);
 	border-block-start: 1px var(--border-style) var(--primary-200-700);
