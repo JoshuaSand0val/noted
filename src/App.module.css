@@ -52,7 +52,7 @@
 		z-index: var(--z-absolute);
 		inset: 0 0 0 auto;
 		background-color: var(--primary-50-900);
-		transition: transform var(--fast-time) var(--ease-out);
+		transition: transform var(--normal-time) var(--ease-out);
 		&:not(:focus-within) {
 			transform: translateX(100%);
 		}
