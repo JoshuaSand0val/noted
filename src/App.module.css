@@ -24,10 +24,6 @@
 
 .viewer {
 	position: relative;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: start;
-	align-items: stretch;
 	padding: var(--safe-main);
 	flex: 1 0 auto;
 }
@@ -37,31 +33,32 @@
 }
 
 .content {
-	display: block;
+	position: absolute;
+	inset: 0;
 	container: content / size;
-	flex: 1 0 auto;
+	transition: right var(--normal-time) var(--fast-time) var(--ease-out);
+	@container (min-inline-size: 1280px) {
+		right: var(--small-container);
+	}
 }
 
 .editor {
+	position: absolute;
+	z-index: var(--z-absolute);
+	inset: 0 0 0 auto;
 	display: block;
 	inline-size: var(--small-container);
 	container: editor / size;
 	border-left: 1px var(--border-style) var(--primary-200-700);
-	flex: 0 1 auto;
-	transition: all var(--fast-time) var(--ease-out);
-	transition-property: background-color, transform;
+	background-color: var(--primary-50-900);
+	transition: transform var(--normal-time) var(--fast-time) var(--ease-out);
+	@media not (prefers-reduced-transparency) {
+		background-color: oklch(from var(--primary-50-900) l c h / var(--high-opacity));
+		backdrop-filter: var(--heavy-blur);
+	}
 	@container (max-inline-size: 1280px) {
-		position: absolute;
-		z-index: var(--z-absolute);
-		inset: 0 0 0 auto;
-		background-color: var(--primary-50-900);
-		transition-duration: var(--normal-time);
 		&:not(:focus-within) {
 			transform: translateX(100%);
-		}
-		@media not (prefers-reduced-transparency) {
-			background-color: oklch(from var(--primary-50-900) l c h / var(--high-opacity));
-			backdrop-filter: var(--heavy-blur);
 		}
 	}
 }
