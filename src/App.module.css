@@ -1,0 +1,34 @@
+/* The website application component styles. */
+
+.container {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: start;
+	align-items: start;
+	background-color: var(--primary-50-900);
+	color: var(--secondary-800-100);
+}
+
+.toolbar, .content, .tabs {
+	flex: 0 0 auto;
+}
+
+.toolbar {
+	padding: var(--safe-header);
+}
+
+.content {
+	display: block;
+	width: 100%;
+	container: content / size;
+	flex: 1 0 auto;
+	padding: max(var(--responsive-size), var(--small-size));
+	padding-right: max(var(--responsive-size), var(--safe-right) + var(--small-size));
+	padding-left: max(var(--responsive-size), var(--safe-left) + var(--small-size));
+}
+
+.tabs {
+	padding: var(--safe-footer);
+}

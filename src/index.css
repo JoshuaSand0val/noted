@@ -22,3 +22,7 @@
 		--display-font: "Noto Sans Display", serif;
 	}
 }
+
+:root {
+	background-color: var(--primary-50-900);
+}
