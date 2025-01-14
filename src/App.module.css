@@ -47,12 +47,13 @@
 	container: editor / size;
 	border-left: 1px var(--border-style) var(--primary-200-700);
 	flex: 0 1 auto;
+	transition: transform var(--fast-time) var(--ease-out);
 	@container (max-inline-size: 1280px) {
 		position: absolute;
 		z-index: var(--z-absolute);
 		inset: 0 0 0 auto;
 		background-color: var(--primary-50-900);
-		transition: transform var(--normal-time) var(--ease-out);
+		transition-duration: var(--normal-time);
 		&:not(:focus-within) {
 			transform: translateX(100%);
 		}
