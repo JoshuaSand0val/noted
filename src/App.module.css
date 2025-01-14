@@ -28,7 +28,6 @@
 	flex-flow: row nowrap;
 	justify-content: start;
 	align-items: stretch;
-	gap: var(--small-size);
 	padding: var(--safe-main);
 	flex: 1 0 auto;
 }
