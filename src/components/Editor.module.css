@@ -6,6 +6,7 @@
 	height: 100%;
 	font-size: var(--medium-font);
 	font-family: var(--body-font);
+	line-height: var(--line-normal);
 	background-color: transparent;
 	border: none;
 	outline: none;
