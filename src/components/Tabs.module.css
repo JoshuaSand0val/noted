@@ -1,0 +1,42 @@
+/* Tabs to choose from created notes (styles). */
+
+.container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: start;
+	align-items: stretch;
+	list-style: none;
+	font-family: var(--display-font);
+	background-color: var(--primary-50-900);
+	transition: background-color var(--x-slow-time) var(--ease-out);
+	border-block-start: 1px var(--border-style) var(--primary-200-700);
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+
+.tab {
+	display: block;
+	min-inline-size: var(--3x-small-container);
+	max-inline-size: var(--x-small-container);
+	text-align: center;
+	background-color: var(--primary-50-900);
+	outline: 1px var(--border-style) var(--primary-200-700);
+	padding-block: var(--x-small-size);
+	padding-inline: var(--medium-size);
+	transition: background-color var(--x-fast-time) var(--ease-out);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	cursor: pointer;
+	flex: 0 0 auto;
+	&:not(:hover, :focus, :active) {
+		transition-duration: var(--x-slow-time);
+	}
+	&:is(:hover, :focus) {
+		background-color: var(--primary-100-800);
+	}
+	&:active {
+		background-color: var(--primary-200-700);
+	}
+}

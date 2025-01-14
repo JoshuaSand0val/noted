@@ -1,3 +1,5 @@
+import Tabs from "./components/Tabs";
+
 import styles from "./App.module.css"
 
 /** The website application component. */
@@ -11,7 +13,7 @@ export default function App() {
 				NOTE CONTENT
 			</main>
 			<aside className={styles.tabs}>
-				NOTE TABS
+				<Tabs />
 			</aside>
 		</article>
 	);
