@@ -1,4 +1,5 @@
 import Editor from "./components/Editor";
+import Note from "./components/Note";
 import Tabs from "./components/Tabs";
 
 import styles from "./App.module.css"
@@ -12,7 +13,7 @@ export default function App() {
 			</aside>
 			<div className={styles.viewer}>
 				<main className={styles.content}>
-					NOTE CONTENT
+					<Note markdown="NOTE MARKDOWN CONTENTS" />
 				</main>
 				<aside className={styles.editor}>
 					<Editor />

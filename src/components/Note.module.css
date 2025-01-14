@@ -1,0 +1,19 @@
+/* A note rendered in Markdown (styles). */
+
+.container {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-family: var(--body-font);
+	font-size: var(--medium-font);
+	line-height: var(--line-normal);
+	letter-spacing: var(--letter-normal);
+	word-spacing: var(--word-normal);
+	padding: var(--responsive-size);
+	overflow: auto;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--display-font);
+		line-height: var(--line-short);
+	}
+}
