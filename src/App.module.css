@@ -7,11 +7,12 @@
 	flex-flow: column nowrap;
 	justify-content: start;
 	align-items: stretch;
+	container: app / size;
 	background-color: var(--primary-50-900);
 	color: var(--secondary-800-100);
 }
 
-.toolbar, .content, .tabs {
+.toolbar, .viewer, .tabs {
 	flex: 0 0 auto;
 }
 
@@ -19,15 +20,45 @@
 	padding: var(--safe-header);
 }
 
-.content {
-	display: block;
-	container: content / size;
+.viewer {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: start;
+	align-items: stretch;
+	gap: var(--small-size);
+	padding: var(--safe-main);
 	flex: 1 0 auto;
-	padding: max(var(--responsive-size), var(--small-size));
-	padding-right: max(var(--responsive-size), var(--safe-right) + var(--small-size));
-	padding-left: max(var(--responsive-size), var(--safe-left) + var(--small-size));
 }
 
 .tabs {
 	padding: var(--safe-footer);
+}
+
+.content {
+	display: block;
+	container: content / size;
+	flex: 1 0 auto;
+}
+
+.editor {
+	display: block;
+	inline-size: var(--small-container);
+	container: editor / size;
+	border-left: 1px var(--border-style) var(--primary-200-700);
+	flex: 0 1 auto;
+	@container (max-inline-size: 1280px) {
+		position: absolute;
+		z-index: var(--z-absolute);
+		inset: 0 0 0 auto;
+		background-color: var(--primary-50-900);
+		transition: transform var(--fast-time) var(--ease-out);
+		&:not(:focus-within) {
+			transform: translateX(100%);
+		}
+		@media not (prefers-reduced-transparency) {
+			background-color: oklch(from var(--primary-50-900) l c h / var(--3x-high-opacity));
+			backdrop-filter: var(--3x-heavy-blur);
+		}
+	}
 }

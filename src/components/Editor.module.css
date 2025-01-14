@@ -1,0 +1,15 @@
+/** WYSIWYG markdown editor interface styles. */
+
+.container {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: var(--medium-font);
+	font-family: var(--body-font);
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: var(--small-size);
+	overflow: auto;
+	resize: none;
+}

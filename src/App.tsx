@@ -1,3 +1,4 @@
+import Editor from "./components/Editor";
 import Tabs from "./components/Tabs";
 
 import styles from "./App.module.css"
@@ -9,9 +10,14 @@ export default function App() {
 			<aside className={styles.toolbar}>
 				FORMATTING TOOLBAR
 			</aside>
-			<main className={styles.content}>
-				NOTE CONTENT
-			</main>
+			<div className={styles.viewer}>
+				<main className={styles.content}>
+					NOTE CONTENT
+				</main>
+				<aside className={styles.editor}>
+					<Editor />
+				</aside>
+			</div>
 			<aside className={styles.tabs}>
 				<Tabs />
 			</aside>
