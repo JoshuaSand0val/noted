@@ -36,7 +36,7 @@
 	position: absolute;
 	inset: 0;
 	container: content / size;
-	transition: right var(--normal-time) var(--fast-time) var(--ease-out);
+	transition: right var(--fast-time) var(--fast-time) var(--ease-out);
 	@container (min-inline-size: 1280px) {
 		right: var(--small-container);
 	}
@@ -51,7 +51,7 @@
 	container: editor / size;
 	border-left: 1px var(--border-style) var(--primary-200-700);
 	background-color: var(--primary-50-900);
-	transition: transform var(--normal-time) var(--fast-time) var(--ease-out);
+	transition: transform var(--fast-time) var(--fast-time) var(--ease-out);
 	@media not (prefers-reduced-transparency) {
 		background-color: oklch(from var(--primary-50-900) l c h / var(--high-opacity));
 		backdrop-filter: var(--heavy-blur);
